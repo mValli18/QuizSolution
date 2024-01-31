@@ -1,0 +1,103 @@
+import React, { useState } from 'react';
+
+function EvaluateQuiz() {
+  const [quizId, setQuizId] = useState('');
+  const [username, setUsername] = useState('');
+  const [questionId, setQuestionId] = useState('');
+  const [userAnswer, setUserAnswer] = useState('');
+  const [evaluationResult, setEvaluationResult] = useState(null);
+
+  // ...
+
+const handleEvaluate = () => {
+    // Make sure all required fields are provided
+    if (quizId && username && questionId && userAnswer) {
+      const evaluationData = {
+        quizId: parseInt(quizId),
+        username,
+        questionId: parseInt(questionId),
+        userAnswer,
+      };
+  
+      // Include quizId in the URL
+      fetch(`http://localhost:5057/api/Quiz/evaluate/${quizId}`, {
+        method: 'POST',
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(evaluationData),
+      })
+        .then(async (response) => {
+          const data = await response.json();
+          setEvaluationResult(data);
+        })
+        .catch((error) => console.error('Error evaluating quiz:', error));
+    } else {
+      alert('Please provide all required fields.');
+    }
+  };
+  
+  
+  return (
+    <div className="inputcontainer">
+      <label className="form-control" htmlFor="quizId">
+        Quiz ID
+      </label>
+      <input
+        id="quizId"
+        type="text"
+        className="form-control"
+        value={quizId}
+        onChange={(e) => setQuizId(e.target.value)}
+      />
+      <label className="form-control" htmlFor="username">
+        Username
+      </label>
+      <input
+        id="username"
+        type="text"
+        className="form-control"
+        value={username}
+        onChange={(e) => setUsername(e.target.value)}
+      />
+      <label className="form-control" htmlFor="questionId">
+        Question ID
+      </label>
+      <input
+        id="questionId"
+        type="text"
+        className="form-control"
+        value={questionId}
+        onChange={(e) => setQuestionId(e.target.value)}
+      />
+      <label className="form-control" htmlFor="userAnswer">
+        User Answer
+      </label>
+      <input
+        id="userAnswer"
+        type="text"
+        className="form-control"
+        value={userAnswer}
+        onChange={(e) => setUserAnswer(e.target.value)}
+      />
+      <button onClick={handleEvaluate} className="btn btn-primary">
+        Evaluate Quiz
+      </button>
+
+      {evaluationResult && (
+        <div>
+          <h2>Evaluation Result</h2>
+          <p>Quiz ID: {evaluationResult.quizId}</p>
+          <p>Username: {evaluationResult.username}</p>
+          <p>Question ID: {evaluationResult.questionId}</p>
+          <p>User Answer: {evaluationResult.userAnswer}</p>
+          <p>Is Correct: {evaluationResult.isCorrect ? 'true' : 'false'}</p>
+          <p>Score: {evaluationResult.score}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+export default EvaluateQuiz;

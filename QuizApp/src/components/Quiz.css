@@ -1,0 +1,42 @@
+.quiz{
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+.btn-takequiz {
+    background-color: rgb(19, 180, 19);
+    color: #fff;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+  .alert-quiz{
+    background-color: rgba(255, 255, 255, 0.5);
+  }
+  /* Style for the select dropdown */
+select {
+  padding: 8px; /* Adjust as needed */
+  width: 200px; /* Adjust as needed to make it equal to the button width */
+  margin-right: 10px; /* Adjust the margin as needed */
+}
+
+/* Style for the search button */
+.btn {
+  padding: 8px; /* Adjust as needed */
+}
+.input-group {
+  display: flex;
+  margin-right: 10px; /* Adjust the margin as needed for spacing between the dropdown and button */
+}
+
+.form-select {
+  flex: 1; /* This makes the select element take up the available space */
+  margin-right: 0; /* Reset the margin for the select element */
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btn {
+  border-radius: 20px;
+  border-radius: 20px;
+}

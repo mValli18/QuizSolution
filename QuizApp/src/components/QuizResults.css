@@ -1,0 +1,41 @@
+
+
+  
+  .quiz-results-paper {
+    padding: 3px;
+    margin-top: 2px;
+   
+  }
+  
+  .quiz-info-card {
+    height: 100%;
+    
+  }
+  
+  /* Celebration effect styles */
+  .celebration-effect {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    animation: confettiAnimation 4s ease-out;
+  }
+  
+  @keyframes confettiAnimation {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    25% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    50% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    75% {
+      transform: translate(-50%, -50%) rotate(-0deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+  }

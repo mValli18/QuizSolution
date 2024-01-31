@@ -1,0 +1,27 @@
+body{
+  background-image: url('./bg.jpg');
+  background-attachment: fixed;
+  color: black;
+  background-size: cover;
+}
+.inputcontainer{
+  max-width: 600px;
+    margin: auto;
+    padding: 10px;
+}
+.input-container-controller {
+    text-align: center;
+    margin-top: 300px; 
+    margin-left:300px;
+    margin-right:300px;
+    border:2px solid ;
+    display:inline-block;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding:20px;
+    border-radius: 25px;
+  }
+  .btn-home {
+    color: black;
+    border:solid black;
+    width:200px;
+  }

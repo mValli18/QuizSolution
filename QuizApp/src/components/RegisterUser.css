@@ -1,0 +1,67 @@
+.registerForm {
+    max-width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.747);
+    /* background-image: url(https://www.architectureartdesigns.com/wp-content/uploads/2016/08/16-13.jpg); */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  .btn-login{
+    background-color:green;
+    color:white;
+    margin-right:auto;
+    margin-left:auto;
+    text-align:center;
+    width:300px;
+    position:relative;
+    margin-bottom:20px;
+    border-radius:20px;
+  }
+  .btn-back{
+    background-color: rgb(56, 31, 201);
+    color:white;
+    width:80px;
+    border-radius:20px;
+  }
+  .form-control {
+    margin-bottom: 15px;
+    border-radius:20px
+  }
+  
+  .alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  
+  .form-select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+  }
+  
+  .button {
+    margin-right: 10px;
+  }
+  .btn-signup{
+    max-width:100%
+  }
+  /* Optional: Add hover effect to buttons */
+  .button:hover, .btn-danger:hover {
+    filter: brightness(90%);
+    cursor: pointer;
+  }
+  
+  /* Optional: Add media query for responsiveness */
+  @media (max-width: 600px) {
+    .registerForm {
+      max-width: 100%;
+    }
+  }
+  
